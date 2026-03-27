@@ -1,0 +1,220 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Issues | Dana Tovar for Smithville City Council">
+  <section class="page-header">
+    <div class="container text-center">
+      <h1>What I Stand For</h1>
+      <p class="subtitle">Real solutions for Smithville's most important issues.</p>
+    </div>
+  </section>
+
+  <section class="issues-section section">
+    <div class="container">
+      <div class="issues-grid">
+        
+        <!-- Issue 1 -->
+        <article class="issue-card">
+          <div class="issue-content">
+            <h2>Managing Growth Responsibly</h2>
+            <div class="local-context">
+              <span class="context-label">Local Context:</span> Smithville has grown ~10% since 2020. The Domain Industrial Park is under development at HWY 71 and SH 95. New residents are arriving daily.
+            </div>
+            <p><strong>My Position:</strong> Growth is good when it is guided. Residents should have a seat at the table when development decisions are made. Transparency means you see the plans before the bulldozers arrive.</p>
+            <div class="action-item">
+              <strong>Action:</strong> Require developer town halls for major zoning changes.
+            </div>
+          </div>
+        </article>
+
+        <!-- Issue 2 -->
+        <article class="issue-card">
+          <div class="issue-content">
+            <h2>Preserving Smithville's Character</h2>
+            <div class="local-context">
+              <span class="context-label">Local Context:</span> We are a "Film Friendly" city, a Cultural District, and a "Music Friendly" community, part of the First Street Initiative.
+            </div>
+            <p><strong>My Position:</strong> Our history and culture are economic assets, not obstacles. Smart growth means building the future without demolishing what makes Smithville worth living in.</p>
+            <div class="action-item">
+              <strong>Action:</strong> Support downtown revitalization while protecting historical corridors.
+            </div>
+          </div>
+        </article>
+
+        <!-- Issue 3 -->
+        <article class="issue-card">
+          <div class="issue-content">
+            <h2>Infrastructure and Services</h2>
+            <div class="local-context">
+              <span class="context-label">Local Context:</span> Southeast Drainage Improvements are ongoing, and solid waste services recently transitioned to Texas Disposal Systems.
+            </div>
+            <p><strong>My Position:</strong> Transparent budgeting so residents know exactly where infrastructure dollars go. Accessible communication when projects affect your street or your commute.</p>
+            <div class="action-item">
+              <strong>Action:</strong> Create a public, easy-to-read "Project Dashboard" for all city infrastructure work.
+            </div>
+          </div>
+        </article>
+
+        <!-- Issue 4 -->
+        <article class="issue-card">
+          <div class="issue-content">
+            <h2>Supporting Local Business</h2>
+            <div class="local-context">
+              <span class="context-label">Local Context:</span> Smithville's Main Street economy and the Chamber of Commerce are the lifeblood of our town.
+            </div>
+            <p><strong>My Position:</strong> A council member who shows up, listens to business owners, and fights for policies that help small businesses thrive, not just big developers.</p>
+            <div class="action-item">
+              <strong>Action:</strong> Streamline permitting for local small businesses to open and expand faster.
+            </div>
+          </div>
+        </article>
+
+        <!-- Issue 5 -->
+        <article class="issue-card">
+          <div class="issue-content">
+            <h2>Property Taxes & Fiscal Responsibility</h2>
+            <div class="local-context">
+              <span class="context-label">Local Context:</span> With affordability continuing to be a major concern, keeping costs reasonable is crucial for families.
+            </div>
+            <p><strong>My Position:</strong> Every dollar the city spends should be justified in plain language. Transparency is a budget line you can read and understand clearly.</p>
+            <div class="action-item">
+              <strong>Action:</strong> Publish single-page, plain-English budget summaries every quarter.
+            </div>
+          </div>
+        </article>
+
+        <!-- Issue 6 -->
+        <article class="issue-card">
+          <div class="issue-content">
+            <h2>Parks, Quality of Life, and Community</h2>
+            <div class="local-context">
+              <span class="context-label">Local Context:</span> Our 11 city parks, Riverbend Park, and proximity to state parks are incredible assets.
+            </div>
+            <p><strong>My Position:</strong> Accessible public spaces are what make Smithville feel like home. Maintaining and improving them is not optional; it's essential for our families.</p>
+            <div class="action-item">
+              <strong>Action:</strong> Secure grant funding specifically for local park maintenance and improvements.
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  
+  <section class="call-to-action-section">
+    <div class="container text-center">
+      <h2>Let's talk about the issues.</h2>
+      <p style="margin-bottom: 2rem;">I want to hear what matters most to you.</p>
+      <a href="/contact" class="btn btn-outline btn-large">Contact Dana</a>
+      <a href="/get-involved#yard-sign" class="btn btn-primary btn-large" style="margin-left: 1rem;">Get a Yard Sign</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 6rem 0;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .issues-section {
+    background-color: var(--color-background);
+  }
+  
+  .issues-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .issue-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border-top: 4px solid var(--color-primary);
+  }
+  
+  .issue-content {
+    padding: 2.5rem;
+  }
+  
+  .issue-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+  
+  .local-context {
+    background-color: #F1F5F9;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #475569;
+    border-left: 3px solid var(--color-accent);
+  }
+  
+  .context-label {
+    font-weight: 700;
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .issue-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .action-item {
+    background-color: rgba(184, 66, 51, 0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(184, 66, 51, 0.2);
+    color: var(--color-text);
+  }
+  
+  .action-item strong {
+    color: var(--color-highlight);
+  }
+  
+  .call-to-action-section {
+    padding: 5rem 0;
+    background-color: white;
+    border-top: 1px solid rgba(27, 58, 92, 0.1);
+  }
+  
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 600px) {
+    .issue-content {
+      padding: 1.5rem;
+    }
+    
+    .call-to-action-section .btn {
+      display: block;
+      margin: 0.5rem auto !important;
+      max-width: 300px;
+    }
+  }
+</style>

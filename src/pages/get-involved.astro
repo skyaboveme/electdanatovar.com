@@ -1,0 +1,338 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Get Involved | Dana Tovar for Smithville City Council">
+  <section class="page-header">
+    <div class="container text-center">
+      <h1>Get Involved</h1>
+      <p class="subtitle">Grassroots campaigns run on neighbors helping neighbors. Here's how you can help.</p>
+    </div>
+  </section>
+
+  <section class="forms-section section">
+    <div class="container">
+      <div class="forms-grid">
+        
+        <!-- Yard Sign Request -->
+        <div class="form-card" id="yard-sign">
+          <div class="card-header">
+            <h2>Request a Yard Sign</h2>
+            <p>In a town of 4,500, a yard sign is the most powerful endorsement you can give. We'll deliver it right to your yard.</p>
+          </div>
+          <form class="campaign-form" action="https://formspree.io/f/placeholder" method="POST">
+            <input type="hidden" name="form-type" value="Yard Sign Request" />
+            
+            <div class="form-group">
+              <label for="ys-name">Full Name *</label>
+              <input type="text" id="ys-name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="ys-address">Street Address (for delivery) *</label>
+              <input type="text" id="ys-address" name="address" required />
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ys-email">Email Address</label>
+                <input type="email" id="ys-email" name="email" />
+              </div>
+              <div class="form-group">
+                <label for="ys-phone">Phone Number *</label>
+                <input type="tel" id="ys-phone" name="phone" required />
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-full">Request My Sign</button>
+            <p class="form-note">By providing your phone number, you agree to receive SMS updates. Reply STOP to cancel.</p>
+          </form>
+        </div>
+
+        <!-- Volunteer Signup -->
+        <div class="form-card" id="volunteer">
+          <div class="card-header">
+            <h2>Volunteer with Dana</h2>
+            <p>Whether you have 2 hours a month or 2 hours a week, we need your help to reach every voter in Smithville.</p>
+          </div>
+          <form class="campaign-form" action="https://formspree.io/f/placeholder" method="POST">
+             <input type="hidden" name="form-type" value="Volunteer Signup" />
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vol-name">Full Name *</label>
+                <input type="text" id="vol-name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="vol-phone">Phone Number *</label>
+                <input type="tel" id="vol-phone" name="phone" required />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="vol-email">Email Address *</label>
+              <input type="email" id="vol-email" name="email" required />
+            </div>
+            
+            <div class="checkbox-group-wrapper">
+              <label class="group-label">How would you like to help?</label>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="help-doors" name="interests" value="Door Knocking" />
+                <label for="help-doors">Door knocking / Block walking</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="help-calls" name="interests" value="Phone Calls" />
+                <label for="help-calls">Making phone calls</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="help-events" name="interests" value="Events" />
+                <label for="help-events">Helping at community events</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="help-digital" name="interests" value="Social Media" />
+                <label for="help-digital">Sharing on social media</label>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary btn-full">Join the Team</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <section class="additional-ways section">
+    <div class="container">
+      <div class="ways-grid">
+        
+        <div class="way-card">
+          <h3>Spread the Word</h3>
+          <p>Copy and paste the message below to share on Facebook or Nextdoor. It's the best way to help Dana early in the campaign!</p>
+          <div class="share-box">
+            <p><em>"Neighbors, I'm supporting Dana Tovar for Smithville City Council, Place 5. She's lived here for 15 years, she's committed to transparency, and she'll actually listen to what residents need. Check out her website and request a yard sign at electdanatovar.com!"</em></p>
+          </div>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://electdanatovar.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Share on Facebook</a>
+        </div>
+        
+        <div class="way-card">
+          <h3>Donate</h3>
+          <p>Local races are won with small contributions from neighbors who care about the future of Smithville. Every dollar helps buy yard signs and literature.</p>
+          <p><strong>To make a contribution, please email dana@electdanatovar.com or call us directly.</strong></p>
+          <div class="donate-cta" style="margin-top: 1.5rem;">
+            <a href="/contact" class="btn btn-primary">Contact to Donate</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 6rem 0;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .forms-section {
+    background-color: var(--color-background);
+  }
+  
+  .forms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .form-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border-top: 5px solid var(--color-highlight);
+  }
+  
+  #volunteer {
+    border-top-color: var(--color-primary);
+  }
+  
+  .card-header {
+    padding: 2.5rem 2.5rem 1.5rem;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  
+  .card-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-header p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .campaign-form {
+    padding: 2.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: border-color 0.2s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(27, 58, 92, 0.1);
+  }
+  
+  .checkbox-group-wrapper {
+    margin-bottom: 2rem;
+  }
+  
+  .group-label {
+    margin-bottom: 0.75rem;
+  }
+  
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .checkbox-item input[type="checkbox"] {
+    margin-right: 0.75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--color-primary);
+  }
+  
+  .checkbox-item label {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  
+  .btn-full {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  .form-note {
+    font-size: 0.8rem;
+    color: #64748B;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* Additional Ways */
+  .additional-ways {
+    background-color: white;
+  }
+  
+  .ways-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+  }
+  
+  .way-card {
+    background-color: #F8FAFC;
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+  }
+  
+  .way-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .way-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .share-box {
+    background: white;
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-accent);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+  
+  .share-box p {
+    margin-bottom: 0;
+    color: #334155;
+  }
+  
+  @media (max-width: 900px) {
+    .forms-grid,
+    .ways-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .campaign-form {
+      padding: 1.5rem;
+    }
+    .card-header {
+      padding: 2rem 1.5rem 1rem;
+    }
+    .way-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

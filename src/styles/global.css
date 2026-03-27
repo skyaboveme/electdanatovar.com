@@ -1,0 +1,109 @@
+:root {
+  --color-primary: #1B3A5C; /* Deep Navy Blue */
+  --color-accent: #D4A843; /* Texas Gold/Amber */
+  --color-background: #FAF8F5; /* Warm Off-White */
+  --color-text: #2D2D2D; /* Dark Charcoal */
+  --color-highlight: #B84233; /* Warm Red */
+  
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-highlight);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-highlight);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #9D382B; /* Darker red */
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #122841; /* Darker navy */
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: white;
+}

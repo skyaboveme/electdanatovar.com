@@ -1,0 +1,171 @@
+---
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Why I\'m Running', href: '/why-im-running' },
+  { label: 'Issues', href: '/issues' },
+  { label: 'Get Involved', href: '/get-involved' },
+  { label: 'Contact', href: '/contact' },
+];
+---
+
+<header class="site-header">
+  <div class="container header-container">
+    <a href="/" class="logo">
+      <span class="logo-name">DANA TOVAR</span>
+      <span class="logo-subtitle">for Smithville City Council</span>
+    </a>
+    
+    <nav class="desktop-nav">
+      <ul>
+        {navItems.map(item => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    
+    <div class="header-cta">
+      <a href="/get-involved#yard-sign" class="btn btn-primary">Get a Yard Sign</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle Menu" id="menuToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+  
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      {navItems.map(item => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
+      <li><a href="/get-involved#yard-sign" class="btn btn-primary mobile-cta">Get a Yard Sign</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-background);
+    border-bottom: 1px solid rgba(27, 58, 92, 0.1); /* Subtle Navy border */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  
+  .logo-name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  
+  .logo-subtitle {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--color-text);
+  }
+  
+  .desktop-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+  }
+  
+  .desktop-nav a {
+    font-weight: 500;
+    color: var(--color-text);
+    font-size: 0.95rem;
+  }
+  
+  .desktop-nav a:hover {
+    color: var(--color-highlight);
+  }
+  
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+  }
+  
+  .mobile-nav {
+    display: none;
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-nav.active {
+    display: block;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .mobile-nav a {
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  .mobile-cta {
+    display: inline-block;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .desktop-nav {
+      display: none;
+    }
+    .header-cta .btn {
+      display: none;
+    }
+    .mobile-menu-toggle {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  // Simple toggle logic for the mobile menu
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mobileNav');
+    
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+    }
+  });
+</script>

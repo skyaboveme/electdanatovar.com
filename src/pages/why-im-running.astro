@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Why I'm Running | Dana Tovar for Smithville City Council">
+  <section class="page-header">
+    <div class="container text-center">
+      <h1>Why I'm Running</h1>
+      <p class="subtitle">Because we can do better at keeping residents informed and involved.</p>
+    </div>
+  </section>
+
+  <section class="motivation-section section">
+    <div class="container motivation-container">
+      <div class="motivation-content">
+        <h2>My Commitment to Smithville</h2>
+        <p>
+          I am running for Smithville City Council, Place 5, because I believe local government works best when it works in the open. For too long, important decisions about our town's future have felt disconnected from the people who actually live here. I believe we can do better. We can be more proactive in keeping residents informed, and we can be more responsive when neighbors reach out with concerns.
+        </p>
+        <p>
+          My campaign is built on three core pillars that will guide every vote I take and every decision I make on the council.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="commitments-section section">
+    <div class="container">
+      <div class="commitment-cards">
+        <!-- Transparency -->
+        <div class="commitment-card">
+          <div class="card-header">
+            <h3>1. Complete Transparency</h3>
+            <span class="pillar-tag">Your Voice</span>
+          </div>
+          <p>
+            Transparency is not a buzzword. It is a budget line you can read. You deserve to know how decisions are made, where tax dollars go, and why. I will push for clearer, plain-language communication from City Hall to residents on budgets, development projects, and council votes.
+          </p>
+          <ul class="action-list">
+            <li>Public, plain-language budget breakdowns</li>
+            <li>Proactive project updates before construction begins</li>
+            <li>Open-door council communication</li>
+          </ul>
+        </div>
+
+        <!-- Accessibility -->
+        <div class="commitment-card">
+          <div class="card-header">
+            <h3>2. Genuine Accessibility</h3>
+            <span class="pillar-tag">Your Council</span>
+          </div>
+          <p>
+            I am a neighbor who picks up the phone, shows up at community events, and listens before she speaks. I will make myself available to every resident in Smithville, not just during campaign season. When you reach out to your council member, you should get an answer.
+          </p>
+          <ul class="action-list">
+            <li>Regular community office hours</li>
+            <li>Responding to every resident inquiry</li>
+            <li>Year-round attendance at neighborhood gatherings</li>
+          </ul>
+        </div>
+
+        <!-- Deep Roots -->
+        <div class="commitment-card">
+          <div class="card-header">
+            <h3>3. Protecting Our Roots</h3>
+            <span class="pillar-tag">Your Neighbor</span>
+          </div>
+          <p>
+            Having called Smithville home for 15 years, I've watched the town grow and invested in its future. I am someone with skin in the game who understands what makes Smithville special and what threatens it. Smart growth means building the future without demolishing our small-town feel.
+          </p>
+          <ul class="action-list">
+            <li>Advocating for responsible, guided growth</li>
+            <li>Supporting Main Street and local businesses</li>
+            <li>Preserving our historical and cultural character</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="call-to-action-section">
+    <div class="container text-center">
+      <h2>Ready to help?</h2>
+      <p style="margin-bottom: 2rem;">Request a yard sign to show your support.</p>
+      <a href="/get-involved#yard-sign" class="btn btn-primary btn-large">Get a Yard Sign</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 6rem 0;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .motivation-section {
+    background-color: white;
+  }
+  
+  .motivation-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .motivation-content h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .motivation-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .commitments-section {
+    background-color: var(--color-background);
+  }
+  
+  .commitment-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .commitment-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--color-primary);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .commitment-card h3 {
+    margin: 0;
+    font-size: 1.75rem;
+  }
+  
+  .pillar-tag {
+    background-color: var(--color-highlight);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .commitment-card p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .action-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .action-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .action-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+  }
+  
+  .call-to-action-section {
+    padding: 5rem 0;
+    background-color: white;
+    border-top: 1px solid rgba(27, 58, 92, 0.1);
+  }
+  
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 600px) {
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

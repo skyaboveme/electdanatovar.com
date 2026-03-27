@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact Dana | Smithville City Council">
+  <section class="page-header">
+    <div class="container text-center">
+      <h1>Contact Dana</h1>
+      <p class="subtitle">Have a question? Ready to help? Reach out today.</p>
+    </div>
+  </section>
+
+  <section class="contact-section section">
+    <div class="container">
+      <div class="contact-wrapper">
+        
+        <div class="contact-info">
+          <h2>Let's connect.</h2>
+          <p>I believe in an open-door policy. Whether you want to discuss a specific neighborhood issue, request a yard sign, or find out how you can volunteer, I'm here to listen.</p>
+          
+          <div class="info-blocks">
+            <div class="info-block">
+              <h3>Email</h3>
+              <a href="mailto:dana@electdanatovar.com">dana@electdanatovar.com</a>
+            </div>
+            
+            <div class="info-block">
+              <h3>Phone</h3>
+              <a href="tel:5125550198">(512) 555-0198</a>
+              <p class="info-note">Call or text any time. If I'm with family or at work, I will call you back within 24 hours.</p>
+            </div>
+            
+            <div class="info-block">
+              <h3>Social Media</h3>
+              <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                Follow on Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <form class="campaign-form" action="https://formspree.io/f/placeholder" method="POST">
+            <input type="hidden" name="form-type" value="Contact Form" />
+            
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 6rem 0;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .contact-section {
+    background-color: var(--color-background);
+  }
+  
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  
+  .contact-info {
+    padding: 4rem;
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  .contact-info h2 {
+    color: white;
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .contact-info > p {
+    color: #A0B6CB;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+  
+  .info-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .info-block h3 {
+    color: var(--color-accent);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-block a {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .info-block a:hover {
+    color: var(--color-accent);
+  }
+  
+  .info-note {
+    font-size: 0.9rem;
+    color: #A0B6CB;
+    margin-top: 0.5rem;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .contact-form-container {
+    padding: 4rem 4rem 4rem 0;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: border-color 0.2s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(27, 58, 92, 0.1);
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .btn-full {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 900px) {
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    
+    .contact-form-container {
+      padding: 3rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .contact-info {
+      padding: 2.5rem 1.5rem;
+    }
+    
+    .contact-form-container {
+      padding: 2.5rem 1.5rem;
+    }
+  }
+</style>
