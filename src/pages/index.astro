@@ -15,10 +15,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <a href="/about" class="btn btn-secondary btn-large">Meet Daña</a>
         </div>
       </div>
-      <div class="hero-image-placeholder">
-        <div class="image-text">
-          [ Placeholder: Photo of Daña in a recognizable Smithville setting ]
-        </div>
+      <div class="hero-image-wrapper">
+        <img src="/assets/smithvillehouse.jpeg" alt="Smithville Community" class="hero-image" />
       </div>
     </div>
   </section>
@@ -144,18 +142,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 1.1rem;
   }
   
-  .hero-image-placeholder {
-    aspect-ratio: 4/5;
-    background-color: #E2E8F0;
+  .hero-image-wrapper {
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
-    color: #64748B;
-    border: 2px dashed #CBD5E1;
-    box-shadow: 0 10px 25px rgba(27, 58, 92, 0.1);
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(27, 58, 92, 0.15);
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
   }
   
   /* Intro Section */

@@ -37,19 +37,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2 class="text-center" style="margin-bottom: 3rem;">Daña in the Community</h2>
       <div class="gallery-grid">
-        <!-- Placeholders -->
-        <div class="gallery-placeholder">
-          <span>[ Community Event Photo ]</span>
-        </div>
-        <div class="gallery-placeholder">
-          <span>[ Main Street Photo ]</span>
-        </div>
-        <div class="gallery-placeholder">
-          <span>[ Local Park Photo ]</span>
-        </div>
-        <div class="gallery-placeholder">
-          <span>[ With Neighbors Photo ]</span>
-        </div>
+        <img src="/assets/smithville%20city.jpg" alt="Smithville Community" class="gallery-image" />
+        <img src="/assets/smithville%20street.jpg" alt="Smithville Main Street" class="gallery-image" />
+        <img src="/assets/smithville-tx-4868456.jpg" alt="Local Park in Smithville" class="gallery-image" />
+        <img src="/assets/smithville1.jpg" alt="Smithville Neighbors" class="gallery-image" />
       </div>
     </div>
   </section>
@@ -66,6 +57,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <style>
   .page-header {
     background-color: var(--color-primary);
+    background-image: linear-gradient(rgba(27, 58, 92, 0.85), rgba(27, 58, 92, 0.85)), url('/assets/smithville1.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 6rem 0;
   }
@@ -112,16 +106,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     gap: 1.5rem;
   }
   
-  .gallery-placeholder {
-    background-color: #E2E8F0;
-    border: 2px dashed #CBD5E1;
+  .gallery-image {
+    width: 100%;
     aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #64748B;
+    object-fit: cover;
     border-radius: 8px;
-    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   }
   
   .call-to-action-section {
