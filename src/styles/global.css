@@ -107,3 +107,21 @@ img {
   background-color: var(--color-primary);
   color: white;
 }
+
+/* Page Header Typography Overrides */
+.page-header h1 {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p,
+.page-header .subtitle {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  max-width: 800px;
+  margin: 0 auto;
+}
