@@ -3,6 +3,10 @@
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "electdanatovar",
 	"main": "@astrojs/cloudflare/entrypoints/server",
+	"routes": [
+		{ "pattern": "electdanatovar.com", "custom_domain": true },
+		{ "pattern": "www.electdanatovar.com", "custom_domain": true }
+	],
 	"assets": {
 		"directory": "./dist",
 		"binding": "ASSETS"
