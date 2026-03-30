@@ -10,7 +10,7 @@ interface Props {
 
 const { 
   title, 
-  description = "Daña Tovar is running for Smithville City Council, Place 5. A third-generation Smithvillian committed to transparency, accessibility, and keeping our town strong. Election Day: May 2, 2026."
+  description = "I'm not a career politician. I'm a neighbor who has been paying attention. Daña Tovar for Smithville City Council, Place 5. A third-generation Smithvillian committed to transparency. Election Day: May 2, 2026."
 } = Astro.props;
 ---
 
@@ -32,6 +32,14 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content="https://electdanatovar.com/og-image.png" />
+    <meta property="og:image:alt" content="Daña Tovar for Smithville City Council, Place 5" />
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://electdanatovar.com/og-image.png" />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
